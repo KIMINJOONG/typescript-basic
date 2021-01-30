@@ -22,11 +22,37 @@
     let person2: string | null;
 
     // unknown
-    let notSure: unknown;
+    let notSure: unknown = 0;
     notSure = 'he';
     notSure = true;
 
     // any
-    let anything: any;
+    let anything: any = 0;
+    anything = 0;
+    anything = 'hello';
+    
+    // void
+    function print(): void {
+        console.log('hello');
+        return;
+    }
+
+    let unusable: void = undefined;
+
+    // never
+    function throwError(message : string) : never {
+        // messageg -> server (log)
+        throw new Error(message);
+        while(true) {}
+    }
+
+    // object
+    let obj:object;
+    function acceptSomeObject(obj: object) {
+
+    }
+    acceptSomeObject([1,2,3]);
+    acceptSomeObject({name : 'kim'});
+    acceptSomeObject({ animal: 'dog'});
 
 }
