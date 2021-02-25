@@ -36,3 +36,20 @@ const lee = new PartTimeEmployee();
 
 const kimAfterPay = pay(kim);
 const leeAfterPay = pay(lee);
+
+const obj = {
+    name: 'kim',
+    age: 20,
+};
+
+const obj2 = {
+    animal: 'dog',
+};
+
+function getValue<T, K extends keyof T> (obj: T, key: K): T[K] {
+    return obj[key];
+}
+
+console.log(getValue(obj, 'name')); // kim 출력
+console.log(getValue(obj, 'age')); // 20 출력
+console.log(getValue(obj2, 'animal')); // 20 출력
