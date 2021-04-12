@@ -43,6 +43,6 @@ export class PageComponent extends BaseComponent<HTMLUListElement> implements Co
       item.attachTo(this.element, 'beforeend');
       item.setOnCloseListener(() => {
         item.removeFrom(this.element);
-      })
+      });
     }
-  }
+}
