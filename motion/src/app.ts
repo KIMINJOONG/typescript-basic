@@ -24,7 +24,7 @@ class App {
     const todo = new TodoComponent('Todo Title', 'TodoItem');
     this.page.addChild(todo);
 
-    const imageBtn = document.querySelector('.new-image')! as HTMLButtonElement;
+    const imageBtn = document.querySelector('#new-image')! as HTMLButtonElement;
     imageBtn.addEventListener('click', () => {
       const dialog = new InputDialog();
       dialog.setOnCloseListener(() => {
